@@ -2,10 +2,10 @@ package com.jersonsatoru.aluraone
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
+import org.springframework.cache.annotation.EnableCaching
 
-@SpringBootApplication
-class AluraOneApplication
+@SpringBootApplication @EnableCaching class AluraOneApplication
 
 fun main(args: Array<String>) {
-	runApplication<AluraOneApplication>(*args)
+    runApplication<AluraOneApplication>(*args)
 }
