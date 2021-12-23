@@ -5,4 +5,3 @@ CREATE TABLE author (
 );
 
 INSERT INTO author (name, email) VALUES ('Jerson', 'jersonsatoru@yahoo.com.br');
-INSERT INTO author (name, email) VALUES ('Satoru', 'jersonsatoru@gmail.com');

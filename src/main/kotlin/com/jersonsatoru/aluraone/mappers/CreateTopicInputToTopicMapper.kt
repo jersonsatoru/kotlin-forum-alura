@@ -15,12 +15,7 @@ class CreateTopicInputToTopicMapper : Mapper<CreateTopicInput, Topic> {
                     title = t.title,
                     message = t.message,
                     createdAt = LocalDateTime.now(),
-                    course = Course(t.courseId, "Spring boot with Kotlin", "Backend"),
-                    author =
-                            Author(
-                                    t.authorId,
-                                    "Jerson Satoru Uyekita",
-                                    "jersonsatoru@yahoo.com.br"
-                            ),
+                    course = Course(t.courseId, "", ""),
+                    author = Author(t.authorId, "", "", ""),
             )
 }

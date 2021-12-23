@@ -15,7 +15,7 @@ class UpdateTopicInputToTopicMapper : Mapper<UpdateTopicInput, Topic> {
                     title = t.title,
                     message = t.message,
                     createdAt = LocalDateTime.now(),
-                    course = Course(1, "Spring boot with Kotlin", "Backend"),
-                    author = Author(1, "Jerson Satoru Uyekita", "jersonsatoru@yahoo.com.br"),
+                    course = Course(t.courseId, "", ""),
+                    author = Author(t.authorId, "", "", ""),
             )
 }
