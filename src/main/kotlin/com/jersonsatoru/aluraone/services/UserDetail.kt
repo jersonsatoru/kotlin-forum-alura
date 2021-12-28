@@ -4,7 +4,7 @@ import com.jersonsatoru.aluraone.entities.Author
 import org.springframework.security.core.userdetails.UserDetails
 
 class UserDetail(private val author: Author) : UserDetails {
-    override fun getAuthorities() = null
+    override fun getAuthorities() = author.roles
     override fun getPassword(): String = author.password
     override fun getUsername(): String = author.email
     override fun isAccountNonExpired(): Boolean = true

@@ -15,8 +15,7 @@ class SecurityConfiguration(
         private val passwordEncoder: PasswordEncoder
 ) : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
-        http!!.antMatcher("/api/v1/**")
-                .authorizeRequests()
+        http!!.authorizeRequests().antMatchers("/api/topics").hasAuthority("READ_WRITE")
                 .anyRequest()
                 .authenticated()
                 .and()
